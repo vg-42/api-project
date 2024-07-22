@@ -17,8 +17,10 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 8.0.x
-    # - name: Restore dependencies
-    #   run: dotnet restore
+    - name: clean previous dependencies
+      run: dotnet clean
+    - name: Restore dependencies
+      run: dotnet restore
     # - name: Build
     #   run: dotnet build --no-restore
     # - name: Test
